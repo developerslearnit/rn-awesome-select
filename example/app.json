@@ -1,0 +1,22 @@
+{
+  "name": "rn-awesome-select-example",
+  "displayName": "RnAwesomeSelect Example",
+  "expo": {
+    "name": "rn-awesome-select-example",
+    "slug": "rn-awesome-select-example",
+    "description": "Example app for rn-awesome-select",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
