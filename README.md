@@ -8,6 +8,16 @@ A cross-platform (iOS / Android), modal select React Native component.
 npm install rn-awesome-select
 ```
 
+## Screenshots
+
+#### IOS
+
+<img src="https://res.cloudinary.com/panachora/image/upload/v1639963663/rn-select-ios_tcvrcg.png"  height="790">
+
+#### Android
+
+<img src="https://res.cloudinary.com/panachora/image/upload/v1639963663/rn-select-android_uzarep.png"  height="790">
+
 ## Usage
 
 ```js
