@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -6,8 +6,8 @@ import {
   TouchableOpacity,
   TextInput,
   ScrollView,
-} from "react-native";
-import { styles } from "./styles";
+} from 'react-native';
+import { styles } from './styles';
 
 const RNModalSelect = ({
   items,
@@ -18,7 +18,7 @@ const RNModalSelect = ({
   onItemSelected,
   onClose,
 }) => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
 
   const searchItem = (text) => {
     setSearch(text);
@@ -41,30 +41,31 @@ const RNModalSelect = ({
 
         <View style={styles.selectContainer}>
           <ScrollView>
-            {items
-              .filter((value) => {
-                if (search == "") {
-                  return value;
-                } else {
-                  return value.name
-                    .toLowerCase()
-                    .includes(search.toLowerCase());
-                }
-              })
-              .map((item, index) => (
-                <TouchableOpacity
-                  onPress={() => {
-                    onItemSelected(item);
-                    onClose();
-                  }}
-                  key={index}
-                  style={styles.optionStyle}
-                >
-                  <Text style={styles.optionText}>
-                    {item[itemLabelFieldName]}
-                  </Text>
-                </TouchableOpacity>
-              ))}
+            {items.length > 0 &&
+              items
+                .filter((value) => {
+                  if (search == '') {
+                    return value;
+                  } else {
+                    return value.name
+                      .toLowerCase()
+                      .includes(search.toLowerCase());
+                  }
+                })
+                .map((item, index) => (
+                  <TouchableOpacity
+                    onPress={() => {
+                      onItemSelected(item);
+                      onClose();
+                    }}
+                    key={index}
+                    style={styles.optionStyle}
+                  >
+                    <Text style={styles.optionText}>
+                      {item[itemLabelFieldName]}
+                    </Text>
+                  </TouchableOpacity>
+                ))}
           </ScrollView>
         </View>
         <TouchableOpacity onPress={onClose} style={styles.selectDismissButton}>
@@ -77,7 +78,8 @@ const RNModalSelect = ({
 
 RNModalSelect.defaultProps = {
   showSelect: false,
+  itemLabelFieldName: 'label',
+  items: [],
 };
 
 export default RNModalSelect;
-

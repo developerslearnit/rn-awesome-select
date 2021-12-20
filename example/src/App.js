@@ -55,7 +55,7 @@ export default function App() {
         <Text style={{ color: 'white' }}>Select Item</Text>
       </TouchableOpacity>
       <RNModalSelect
-        items={items}
+        //items={items}
         itemLabelFieldName="name"
         enableSearch={true}
         title="Select Platform"
