@@ -1,6 +1,6 @@
 {
   "name": "rn-awesome-select",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A cross platform modal select library for react native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -34,7 +34,11 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "modal select",
+    "react-native select",
+    "react-native modal select",
+    "dropdown"
   ],
   "repository": "https://github.com/developerslearnit/rn-awesome-select",
   "author": "Mark <mark2kk@gmail.com> (https://github.com/developerslearnit)",
