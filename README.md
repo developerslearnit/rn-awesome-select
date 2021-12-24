@@ -114,6 +114,46 @@ If you have a different object structure than the example above, in that case, y
 | onItemSelected     | The function that is called when an item is selected         | func    | true     | null    |
 | onClose            | The function that is called when the dismiss button is click | func    | true     | null    |
 
+## Custom styles
+
+Custom styles allows you to change all the default style to suite your app theme.
+
+##### overlayColor
+
+Changes the overlay color of the modal. `Usage overlayColor='rgba(0,0,0,0.5)'`
+
+##### containerStyle
+
+Modifies the overall style of the select container. The default is `rgba(240,240,241,0.8)`. Accepts all view styles
+
+##### titleTextStyle
+
+The text style of the select title. Accepts all Text styles
+
+##### searchInputWrapStyle
+
+Styles of the search input wrapper. Accepts all View's styles
+
+##### searchInputStyle
+
+Styles of the search input. Accepts all TextInput styles
+
+##### optionItemStyle
+
+Styles of the select items. Accepts all TouchableOpacity styles
+
+##### optionTextStyle
+
+Styles of the option text. Accepts all Text styles
+
+##### dismissButtonStyle
+
+Styles of the dismiss button. Accepts all TouchableOpacity styles
+
+##### dismissButtonTextStyle
+
+Styles of the dismiss button text. Accepts all Text styles
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.

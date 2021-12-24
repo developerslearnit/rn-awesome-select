@@ -1,7 +1,7 @@
 {
   "name": "rn-awesome-select",
-  "version": "0.1.2",
-  "description": "A cross platform modal select library for react native",
+  "version": "0.1.3",
+  "description": "A cross platform customizable modal select library for react native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",

@@ -17,6 +17,15 @@ const RNModalSelect = ({
   showSelect,
   onItemSelected,
   onClose,
+  containerStyle,
+  overlayColor,
+  titleTextStyle,
+  searchInputWrapStyle,
+  searchInputStyle,
+  optionItemStyle,
+  optionTextStyle,
+  dismissButtonStyle,
+  dismissButtonTextStyle,
 }) => {
   const [search, setSearch] = useState('');
 
@@ -26,12 +35,19 @@ const RNModalSelect = ({
 
   return (
     <Modal animationType="slide" visible={showSelect}>
-      <View style={styles.selectOverlay}>
-        {title && <Text style={styles.selectTitle}>{title}</Text>}
+      <View
+        style={[
+          styles.selectOverlay,
+          overlayColor ? { backgroundColor: overlayColor } : {},
+        ]}
+      >
+        {title && (
+          <Text style={[styles.selectTitle, titleTextStyle]}>{title}</Text>
+        )}
         {enableSearch && (
-          <View style={styles.searchInputContainer}>
+          <View style={[styles.searchInputContainer, searchInputWrapStyle]}>
             <TextInput
-              style={styles.searchInput}
+              style={[styles.searchInput, searchInputStyle]}
               placeholder="Search"
               value={search}
               onChangeText={(text) => searchItem(text)}
@@ -39,7 +55,7 @@ const RNModalSelect = ({
           </View>
         )}
 
-        <View style={styles.selectContainer}>
+        <View style={[styles.selectContainer, containerStyle]}>
           <ScrollView>
             {items.length > 0 &&
               items
@@ -59,17 +75,22 @@ const RNModalSelect = ({
                       onClose();
                     }}
                     key={index}
-                    style={styles.optionStyle}
+                    style={[styles.optionStyle, optionItemStyle]}
                   >
-                    <Text style={styles.optionText}>
+                    <Text style={[styles.optionText, optionTextStyle]}>
                       {item[itemLabelFieldName]}
                     </Text>
                   </TouchableOpacity>
                 ))}
           </ScrollView>
         </View>
-        <TouchableOpacity onPress={onClose} style={styles.selectDismissButton}>
-          <Text style={styles.cancelText}>Dismiss</Text>
+        <TouchableOpacity
+          onPress={onClose}
+          style={[styles.selectDismissButton, dismissButtonStyle]}
+        >
+          <Text style={[styles.cancelText, dismissButtonTextStyle]}>
+            Dismiss
+          </Text>
         </TouchableOpacity>
       </View>
     </Modal>

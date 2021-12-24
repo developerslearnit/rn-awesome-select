@@ -41,6 +41,7 @@ const items = [
 
 export default function App() {
   const [visible, setVisible] = useState(false);
+  const [selected, setSelected] = useState(null);
   return (
     <View style={styles.container}>
       <TouchableOpacity
@@ -54,14 +55,17 @@ export default function App() {
       >
         <Text style={{ color: 'white' }}>Select Item</Text>
       </TouchableOpacity>
+      <Text>ID : {selected?.id}</Text>
+      <Text>Text : {selected?.name}</Text>
       <RNModalSelect
-        //items={items}
+        items={items}
         itemLabelFieldName="name"
         enableSearch={true}
         title="Select Platform"
         showSelect={visible}
         onItemSelected={(item) => {
           console.log(item);
+          setSelected(item);
         }}
         onClose={() => setVisible(false)}
       />
@@ -79,5 +83,9 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     marginVertical: 20,
+  },
+
+  containerStyle: {
+    backgroundColor: 'yellow',
   },
 });

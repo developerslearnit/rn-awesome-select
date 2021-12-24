@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     paddingBottom: Platform.OS == 'ios' ? '20%' : '10%',
     justifyContent: 'center',
     backgroundColor:
-      Platform.OS == 'ios' ? 'rgba(0,0,0,0.5)' : 'rgba(0,0,0,0.3)',
+      Platform.OS == 'ios' ? 'rgba(0,0,0,0.6)' : 'rgba(0,0,0,0.8)',
   },
   selectContainer: {
     flexShrink: 1,
@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
     padding: 8,
     paddingBottom: 0,
     paddingTop: 0,
-    borderRadius: Platform.OS == 'ios' ? 10 : 0,
+    borderRadius: 10,
     backgroundColor: Platform.OS == 'ios' ? 'rgba(240,240,241,0.8)' : '#fff',
   },
   selectDismissButton: {
@@ -52,7 +52,7 @@ export const styles = StyleSheet.create({
     height: 45,
     marginTop: 10,
     backgroundColor: Platform.OS == 'ios' ? 'rgba(240,240,241,0.8)' : '#fff',
-    borderRadius: Platform.OS == 'ios' ? 5 : 0,
+    borderRadius: 5,
   },
   searchInput: {
     flex: 1,
