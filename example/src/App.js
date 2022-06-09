@@ -58,6 +58,7 @@ export default function App() {
       <Text>ID : {selected?.id}</Text>
       <Text>Text : {selected?.name}</Text>
       <RNModalSelect
+      transparent={true}
         items={items}
         itemLabelFieldName="name"
         enableSearch={true}

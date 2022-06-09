@@ -26,6 +26,7 @@ const RNModalSelect = ({
   optionTextStyle,
   dismissButtonStyle,
   dismissButtonTextStyle,
+  transparent,
 }) => {
   const [search, setSearch] = useState('');
 
@@ -34,7 +35,7 @@ const RNModalSelect = ({
   };
 
   return (
-    <Modal animationType="slide" visible={showSelect}>
+    <Modal transparent={transparent} animationType="slide" visible={showSelect}>
       <View
         style={[
           styles.selectOverlay,
